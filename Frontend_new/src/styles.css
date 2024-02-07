@@ -1,0 +1,28 @@
+.my-custom-dialog {
+  max-width: 400px;
+  margin: auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  max-height: 80vh; 
+  overflow-y: auto; 
+  height: auto;
+}
+
+.my-custom-dialog input {
+  width: 100%;
+}
+
+.my-custom-dialog ::ng-deep .cdk-virtual-scroll-content {
+  overflow-x: hidden !important;
+}
+
+.dialog-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-edit-form {
+  width: 300px;
+}
