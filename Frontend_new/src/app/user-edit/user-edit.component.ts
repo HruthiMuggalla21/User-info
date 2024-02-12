@@ -2,7 +2,6 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { UserService } from '../../user.service';
 import { FormGroup, Validators, FormBuilder } from '@angular/forms';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
-import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-user-edit',
@@ -34,7 +33,7 @@ export class UserEditComponent implements OnInit {
    
     this.userService.updateUser(this.userId, this.userFormUpdate.value)
       .subscribe(
-        (res) => {
+        (res:any) => {
           console.log('Data updated successfully', res);
           alert('Data Updates Successfully!');
           // Close the dialog and pass the updated user data back
